@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bouton Magic</title>
+    <style>
+        body {
+            background-color: #f5f0f0;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: rgb(16, 16, 17);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 1.5%;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 3.5%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: translate(calc(-50% + (Math.random() * window.innerWidth)),
+                    calc(-50% + (Math.random() * window.innerHeight)));
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1> Bienvenu sur la page Magic</h1>
+    <button id="Magicbutton"> Cliquez-moi </button>
+    <script>
+        
+        // const h1 = document.querySelector('h1');
+        // const button = document.getElementById('Magicbutton');
+
+        // button.addEventListener('click', () => {
+        //     h1.textContent = "Vous avez cliqué le bouton !";
+        //     button.style.backgroundColor = "green";
+        // });
+
+        // button.addEventListener('mouseover', () => {
+        //     const randomX = Math.random() * window.innerWidth - button.offsetWidth;
+        //     const randomY = Math.random() * window.innerHeight - button.offsetHeight;
+        //     button.style.position = "absolute";
+        //     button.style.left = `${randomX}px`;
+        //     button.style.top = `${randomY}px`;
+        // });
+    </script>
 </body>
+
 </html>
