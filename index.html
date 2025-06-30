@@ -42,35 +42,27 @@
     <button id="Magicbutton"> Cliquez-moi </button>
 
     <script>
-        
-    const h1 = document.querySelector('h1');
-    const button = document.getElementById('Magicbutton');
 
+    
+const h1 = document.querySelector('h1');
+const button = document.getElementById('Magicbutton');
 
-    button.addEventListener('click', () => {
-            h1.textContent = "Vous avez cliqué le bouton !";
-            button.style.backgroundColor = "green";
-        });
+button.addEventListener('click', () => {
+    h1.textContent = "Vous avez cliqué le bouton !";
+    button.style.backgroundColor = "green";
 
-        // Calculer une nouvelle position aléatoire
-        const maxX = window.innerWidth - button.offsetWidth;
-        const maxY = window.innerHeight - button.offsetHeight;
-        const randomX = Math.floor(Math.random() * maxX);
-        const randomY = Math.floor(Math.random() * maxY);
+    // Calculer une nouvelle position aléatoire
+    const maxX = window.innerWidth - button.offsetWidth;
+    const maxY = window.innerHeight - button.offsetHeight;
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
 
-        // Déplacer le bouton
-        button.style.position = "absolute";
-        button.style.left = `${randomX}px`;
-        button.style.top = `${randomY}px`;
-    });
+    // Déplacer le bouton
+    button.style.position = "absolute";
+    button.style.left = `${randomX}px`;
+    button.style.top = `${randomY}px`;
+});
 
-        // button.addEventListener('mouseover', () => {
-        //     const randomX = Math.random() * window.innerWidth - button.offsetWidth;
-        //     const randomY = Math.random() * window.innerHeight - button.offsetHeight;
-        //     button.style.position = "absolute";
-        //     button.style.left = `${randomX}px`;
-        //     button.style.top = `${randomY}px`;
-        // });
     </script>
 </body>
 
